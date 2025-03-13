@@ -1,30 +1,43 @@
-import styles from "../../styles/Home.module.css";
+import "./perfil.css";
 import Image from "next/image";
+import Cards from "../../components/Cards";
 import perfil from "../../public/fotoperfil.webp";
+import publicacao from "../../public/imagem5.jpg";
 
 export default function HomePage() {
     return (
-        <div className={styles.container}> 
-            <div className={styles.fundo}></div>   
+        <div className="container">
+            <header className="perfilHeader">
+                <div className="inf">
+                    <Image className="perfilImage" src={perfil} alt="Perfil" />
 
-            <div className={styles.informationuser}>
+                    <div className="dados">
+                        <h1 className="perfilTitle">Evelyn Oliveira</h1>
+                        <p className="perfilText">Email: evelynolliveira@gmail.com</p></div>
+                </div>
+            </header>
 
-            <Image className={styles.perfil} src={perfil} alt="Perfil" />
-            
-                <h2 className={styles.subtitle}>Informações do Usuário</h2>
-                <p className={styles.text}>Nome: Evelyn Oliveira</p>
-                <p className={styles.text}>Email: eveelynOliveira@gmail.com</p>
-                <p className={styles.text}>Idade: 16 anos</p>
-                <p className={styles.text}>Telefone: (11) 99999-9999</p>
-                <p className={styles.text}>Endereço: Rua das Flores, 123</p>
-                <p className={styles.text}>Cidade: São Paulo</p>
-                <p className={styles.text}>Estado: SP</p>
-                <p className={styles.text}>CEP: 12345-678</p>
-                <p className={styles.text}>País: Brasil</p>
-                <p className={styles.text}>Data de Nascimento: 01/01/2005</p>
-                <p className={styles.text}>Sexo: Feminino</p>
-            </div>
-            
+            <main className="main-content">
+                <h1 className="titleaula">Próximas Aulas</h1>
+                <div className="cards">
+                    <Cards horario="19:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                    <Cards horario="20:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                    <Cards horario="17:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                    <Cards horario="16:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                </div>
+
+
+                <div className="publicacao">
+                    <div className="perfiluser">
+                        <h3 className="perfilTitle">Evelyn Oliveira</h3>
+                        <p>17 fev. 2025 - 20:15</p>
+                    </div>
+                    <div className="imagem">
+                        <Image className="publicacaoimg" src={publicacao} alt="Publicação" />
+                    </div>
+                </div>
+
+            </main>
         </div>
     );
 }

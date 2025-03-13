@@ -1,0 +1,93 @@
+/* Inicio da Header*/
+.container {
+    background-color: #dedede;
+}
+
+.perfilHeader {
+    background-color: #e5e5e5ef;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.inf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+.perfilImage {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Fim da Header*/
+
+/* Inicio da Main*/
+
+.titleaula {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-right: 2rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.publicacao {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    width: 24.2rem;
+    height: 30rem;
+    background-color: #fff;
+
+}
+
+.perfiluser {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: #666;
+}
+
+.perfilTitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+}
+
+.publicacaoimg {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 0.2rem;
+
+}

@@ -95,3 +95,43 @@
 }
 
 
+@media (max-width: 768px) {
+    .blococadastro {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .blococadastro {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+}
