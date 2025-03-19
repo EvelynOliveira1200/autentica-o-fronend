@@ -1,0 +1,42 @@
+
+.publicacao {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    width: 24%;
+    height: 30%;
+    background-color: #fff;
+    margin-bottom: 2rem;
+
+}
+
+.perfiluser {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: #666;
+}
+
+.perfilTitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+}
+
+.publicacaoimg {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 0.2rem;
+
+}
