@@ -8,18 +8,18 @@
 
 .fundo {
     display: flex;
-    width: 100%;
-    height: 100%; 
+    width: 100vw; 
+    height: 100vh; 
     justify-content: center;
-    background-image: url('/fundohome.jpg');
+    background-image: url('/fundohome.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed; 
     top: 0;
     left: 0;
     z-index: -1;
-    opacity:  black 0.5;
+    opacity: black 0.5; 
     filter: blur(3px);
 }
 
@@ -29,6 +29,9 @@
     height: 9rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .inf {
@@ -55,29 +58,132 @@
 }
 
 .titleAula {
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: #ece7e7;
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 0;
-    margin-left: 1rem;
+    margin-left: 10rem;
 }
 
-.cards {
+.cardslinha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.cards, .cards1 {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha-publicacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Reduz o espaçamento entre as publicações */
+    justify-content: center; /* Centraliza as publicações */
+    align-items: center; /* Alinha verticalmente */
+    width: 100%;
+    margin: 1rem auto; /* Centraliza o container */
+}
+
+.perfiluser {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: #666;
+}
+
+.perfilTitle {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.publicacaoimg {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 0.2rem;
 }
 
 .publicacao {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.5rem; /* Ajusta o espaçamento interno */
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem; /* Reduz o espaçamento externo */
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+    .linha-publicacao {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .publicacao {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-content: center;
+        height: auto;
+    }
+
     .perfilHeader {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .perfilImage {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .publicacaoimg {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .linha-publicacao {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .publicacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 50%;
+    }
+
+    .perfilHeader {
         height: auto;
+        padding: 1rem;
+        text-align: center;
     }
 
     .inf {
@@ -86,28 +192,37 @@
     }
 
     .dados {
-        margin-left: 0;
-        margin-right: 0;
+        margin: 1rem 0;
         text-align: center;
     }
 
-    .cards {
+    .perfilImage {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .titleAula {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .cardslinha {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .publicacao {
+    .cards, .cards1 {
+        display: flex;
         flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .perfilImage {
-        width: 5rem;
-        height: 5rem;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
     }
 
-    .titleaula {
-        font-size: 1.2rem;
+    .publicacaoimg {
+        width: 10rem;
+        height: 10rem;
     }
 }

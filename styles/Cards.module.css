@@ -1,13 +1,12 @@
 .cards {
     display: flex;
-    flex-direction: row;
     border: 1px solid #ffffff;
     border-radius: 8px;
     padding: 16px;
-    margin: 16px;
+    margin: 1.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 8rem;
-    width: 25rem;
+    width: 40%;
     background-color: #ffffff;
 }
 
@@ -18,7 +17,7 @@
 .cardsdiv {
     margin-bottom: 16px;
     background-color: #ffffff;
-    width: 8rem;
+    width: 50%;
     height: 100%;
     border-radius: 8px;
 }
@@ -26,22 +25,19 @@
 .horario {
     font-size: 1.2rem;
     color: #292929;
+    margin-left: 2rem;
 }
 
 .text {
     font-size: 1rem;
     color: #666;
+    margin-left: 2rem;
 }
 
 .data {
     font-size: 0.8rem;
     color: #999;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 2rem;
 }
 
 .titulo {
@@ -61,5 +57,19 @@
 
 .button:hover {
     background-color: #2b4926;
-    ;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .cards {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cards {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+    }
 }

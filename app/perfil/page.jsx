@@ -18,7 +18,6 @@ const publicacoes = [
 export default function HomePage() {
     return (
         <div className="container">
-            
             <div className="fundo"></div>
 
             <header className="perfilHeader">
@@ -32,18 +31,23 @@ export default function HomePage() {
                     />
                     <div className="dados">
                         <h1 className="perfilTitle">Evelyn Oliveira</h1>
-                        <p className="perfilText">Email: evelynolliveira@gmail.com</p></div>
+                        <p className="perfilText">Email: evelynolliveira@gmail.com</p>
+                    </div>
                 </div>
             </header>
             <main className="main-content">
                 <h1 className="titleAula">Próximas Aulas</h1>
-                <div className="cards">
-                    <Cards horario="19:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
-                    <Cards horario="20:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
-                    <Cards horario="17:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
-                    <Cards horario="16:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                <div className="cardslinha">
+                    <div className="cards">
+                        <Cards horario="19:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                        <Cards horario="20:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                    </div>
+                    <div className="cards1">
+                        <Cards horario="17:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                        <Cards horario="16:15" data="17/02/2025" texto="Quinta-feira" titulo="Crossfit" text="Check-in" button="aula" />
+                    </div>
                 </div>
-                <div className="publicacao">
+                <div className="linha-publicacao">
                     {publicacoes.map((pub, index) => (
                         <Publicacao
                             key={index}
