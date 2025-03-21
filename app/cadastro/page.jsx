@@ -12,7 +12,7 @@ export default function CadastroPage() {
             <div className="blococadastro">
                 <Image className="logo" src={logo} alt="Logo" />
 
-                <h1 className="styles.title">Cadastro Ct Rapina</h1>
+                <h1 className="title">Cadastro Ct Rapina</h1>
 
                 <form className="form">
                     <label className="label">
