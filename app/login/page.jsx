@@ -1,25 +1,43 @@
 "use client";
 
-import Button from "../../components/Button";
-import "./login.css";
-import Image from "next/image";
-import logo from "../../public/logobranco.jpg";
-
 import { useState } from "react";
+import Image from "next/image";
+import Button from "../../components/Button";
+import logo from "../../public/logobranco.jpg";
+import "./login.css";
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState(""); 
-    const [error, setError] = useState(null);
+    const [confirmSenha, setConfirmSenha] = useState("");
+    const [error, setError] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleCheck = () => {
+        if (isSubmitting) return;
+        setIsSubmitting(true);
+
         if (!email.includes("@") || !email.includes(".")) {
             setError("Insira um email válido");
-        } else if (senha.length < 6) {
-            setError("A senha deve ter no mínimo 6 caracteres");
-        } else {
-            setError("Sucesso");
+            setIsSubmitting(false);
+            return;
         }
+        if (senha.length < 6) {
+            setError("A senha deve ter no mínimo 6 caracteres");
+            setIsSubmitting(false);
+            return;
+        }
+        if (senha !== confirmSenha) {
+            setError("As senhas não coincidem");
+            setIsSubmitting(false);
+            return;
+        }
+
+        setError("Sucesso");
+
+        setTimeout(() => {
+            setIsSubmitting(false);
+        }, 1000);
     };
 
     return (
@@ -47,8 +65,23 @@ export default function Login() {
                             onChange={(e) => setSenha(e.target.value)}
                         />
                     </label>
-                    <Button text="Login" onClick={handleCheck} />
-                    {error && <p className="error-text">{error}</p>}
+                    <label className="label">
+                        <input 
+                            type="password" 
+                            className="input" 
+                            placeholder="Confirme sua senha" 
+                            value={confirmSenha} 
+                            onChange={(e) => setConfirmSenha(e.target.value)}
+                        />
+                    </label>
+                    <Button 
+                        text="Login" 
+                        onClick={handleCheck} 
+                        disabled={isSubmitting} 
+                        route={error === "Sucesso" ? "/perfil" : null} 
+                    />
+
+                    {error && <p className={`error-text ${error === "Sucesso" ? "success" : ""}`}>{error}</p>}
                     <p className="minitext">Esqueceu a senha?</p>
                 </form>
                 <div className="line"></div>

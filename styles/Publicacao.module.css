@@ -3,8 +3,8 @@
     flex-direction: column;
     border-radius: 0.5rem;
     background-color: #fff;
-    width: 21rem;
-    height: 28rem;
+    width: 20rem;
+    height: 30rem;
     justify-content: center;
     align-items: center;
     margin: 0.4rem;
@@ -32,8 +32,8 @@
 }
 
 .publicacaoimg {
-    width: 16rem;
-    height: 16rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 0.2rem;
     margin: 0 auto;
 }
