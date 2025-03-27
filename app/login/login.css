@@ -115,6 +115,15 @@
     text-decoration: none;
 }
 
+.error-text {
+    color: red;
+    font-size: 0.7rem;
+}
+
+.error-text.success {
+    color: green;
+}
+
 @media screen and (min-width: 1440px) {
     .blocologin {
         width: 30rem;
