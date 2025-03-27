@@ -111,11 +111,20 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px)  {
     .linha-publicacao {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 3rem;
+        width: 100%;
+    }
+
+    .cards, .cards1 {
+        display: flex;
+        gap: 1rem;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
     }
 }

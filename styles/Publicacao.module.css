@@ -64,13 +64,15 @@
 
 @media screen and (max-width: 1024px) {
     .publicacao {
-        width: 25rem;
-        height: 35rem;
+        width: 100%; 
+        max-width: 20rem; 
+        height: auto; 
+        margin: 0 auto;
     }
 
     .publicacaoimg {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
     }
 }
 
